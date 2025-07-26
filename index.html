@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <title>Inicio</title>
 </head>
+<section id="donar" style="padding: 20px; background-color: #f4f4f4;">
+  <h2>Formulario de Donaciones</h2>
+  <form action="procesar_donacion.php" method="POST">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" name="nombre" id="nombre" required><br><br>
+
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" name="email" id="email" required><br><br>
+
+    <label for="monto">Monto a donar (CLP):</label><br>
+    <input type="number" name="monto" id="monto" min="1000" required><br><br>
+
+    <input type="submit" value="Donar ahora">
+  </form>
+</section>
+
 <body>
     <h1>Bienvenido al Sistema de Gestión</h1>
     <ul>
