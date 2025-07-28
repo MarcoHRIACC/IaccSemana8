@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donaciones - Fundación ONG</title>
+  <style>
+    :root {
+      --primary-color: #007ACC;
+      --primary-hover: #005F99;
+      --background-color: #f4f6f8;
+      --form-bg: #ffffff;
+      --text-color: #333333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    p {
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      width: 100%;
+      max-width: 400px;
+      background-color: var(--form-bg);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    small {
+      display: block;
+      margin-bottom: 1rem;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--primary-hover);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      form {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Apoya Nuestra Causa</h1>
+  <p>Tu aporte permite extender el impacto de nuestra labor comunitaria. ¡Gracias por confiar en nosotros!</p>
+
+  <form action="#" method="post" aria-label="Formulario de Donación">
+    <label for="monto">Monto a donar (CLP):</label>
+    <input
+      type="number"
+      id="monto"
+      name="monto"
+      placeholder="Ej: 5000"
+      required
+      min="1000"
+      step="500"
+      aria-describedby="monto-info"
+    />
+    <small id="monto-info">Monto mínimo sugerido: $1.000 CLP</small>
+    <button type="submit">Donar Ahora</button>
+  </form>
+</body>
+</html>
