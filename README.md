@@ -30,4 +30,4 @@ Este proyecto permite simular una organización con proyectos comunitarios, gest
 
  git clone https://github.com/MarcoHRIACC/IaccSemana8.git
  
-#Caldera - Chile 2025
+#Caldera - Chile 2025 - 2026
