@@ -8,7 +8,7 @@
         .form-container { background: #fff; padding: 20px; border-radius: 6px; max-width: 600px; margin: auto; }
         .form-group { margin-bottom: 15px; }
         label { display: block; font-weight: bold; }
-        input, textarea { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+        input, textarea { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; box-sizing: border-box; }
         .error { color: red; font-size: 14px; }
         button { background: #27ae60; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
     </style>
@@ -19,7 +19,7 @@
         <form action="procesar_donante.php" method="post" onsubmit="return validarDonante()">
             <div class="form-group">
                 <label for="nombre_donante">Nombre del Donante:</label>
-                <input type="text" id="nombre_donante" name="nombre_donante" required>
+                <input type="text" id="nombre_donante" name="nombre_donante" required minlength="3">
                 <span class="error" id="errorNombre"></span>
             </div>
             <div class="form-group">
@@ -29,11 +29,11 @@
             </div>
             <div class="form-group">
                 <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono">
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-\s]{7,15}">
             </div>
             <div class="form-group">
                 <label for="monto_donado">Monto Donado ($):</label>
-                <input type="number" id="monto_donado" name="monto_donado" step="0.01" required>
+                <input type="number" id="monto_donado" name="monto_donado" step="0.01" min="1" required>
                 <span class="error" id="errorMonto"></span>
             </div>
             <button type="submit">Registrar Donante</button>
@@ -55,7 +55,7 @@
                 document.getElementById("errorNombre").textContent = "El nombre debe tener al menos 3 caracteres.";
                 valido = false;
             }
-            if (!correo.includes("@")) {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
                 document.getElementById("errorCorreo").textContent = "Correo electrónico no válido.";
                 valido = false;
             }

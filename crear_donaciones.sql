@@ -1,24 +1,24 @@
-
--- Crear tabla DONACION
-CREATE TABLE IF NOT EXISTS DONACION (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_proyecto INT,
-    id_donante INT,
-    monto DECIMAL(10,2),
-    fecha DATE,
-    FOREIGN KEY (id_proyecto) REFERENCES PROYECTO(id),
-    FOREIGN KEY (id_donante) REFERENCES DONANTE(id)
-);
-
--- Insertar 10 registros de ejemplo
-INSERT INTO DONACION (id_proyecto, id_donante, monto, fecha) VALUES
-(1, 1, 100.00, '2025-07-01'),
-(1, 2, 150.00, '2025-07-02'),
-(1, 3, 300.00, '2025-07-03'),
-(2, 1, 500.00, '2025-07-04'),
-(2, 2, 100.00, '2025-07-05'),
-(3, 3, 250.00, '2025-07-06'),
-(1, 1, 200.00, '2025-07-07'),
-(3, 1, 75.00, '2025-07-08'),
-(2, 3, 80.00, '2025-07-09'),
-(1, 2, 120.00, '2025-07-10');
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; }
+        ul { line-height: 1.8; }
+        a { text-decoration: none; color: #007BFF; }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido al Sistema de Gestión</h1>
+    <ul>
+        <li><a href="formulario_proyecto.html">Registrar Proyecto</a></li>
+        <li><a href="formulario_donante.html">Registrar Donante</a></li>
+        <li><a href="formulario_donacion.html">Registrar Donación</a></li>
+        <li><a href="ver_proyectos.php">Ver Proyectos</a></li>
+        <li><a href="ver_donantes.php">Ver Donantes</a></li>
+        <li><a href="ver_donaciones.php">Ver Donaciones</a></li>
+        <li><a href="resumen_donaciones.php">Resumen de Donaciones</a></li>
+    </ul>
+</body>
+</html>
